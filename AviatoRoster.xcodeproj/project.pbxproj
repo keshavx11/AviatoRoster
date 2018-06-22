@@ -16,6 +16,8 @@
 		6B14BAF320DD5A6500FA58B3 /* DutyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B14BAF220DD5A6500FA58B3 /* DutyCell.swift */; };
 		6B14BAF920DD6DD300FA58B3 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B14BAF820DD6DCF00FA58B3 /* Font Awesome 5 Free-Solid-900.otf */; };
 		6B14BAFB20DD782200FA58B3 /* DutyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B14BAFA20DD782200FA58B3 /* DutyDetailVC.swift */; };
+		6B14BAFD20DD876200FA58B3 /* paperPlane.scn in Resources */ = {isa = PBXBuildFile; fileRef = 6B14BAFC20DD876200FA58B3 /* paperPlane.scn */; };
+		6B14BAFF20DD879100FA58B3 /* ARPlaneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B14BAFE20DD879100FA58B3 /* ARPlaneVC.swift */; };
 		6B886CBA20DD3D0C003F07F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B886CB920DD3D0C003F07F8 /* AppDelegate.swift */; };
 		6B886CBC20DD3D0C003F07F8 /* RosterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B886CBB20DD3D0C003F07F8 /* RosterVC.swift */; };
 		6B886CBF20DD3D0C003F07F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B886CBD20DD3D0C003F07F8 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		6B14BAF220DD5A6500FA58B3 /* DutyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutyCell.swift; sourceTree = "<group>"; };
 		6B14BAF820DD6DCF00FA58B3 /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
 		6B14BAFA20DD782200FA58B3 /* DutyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutyDetailVC.swift; sourceTree = "<group>"; };
+		6B14BAFC20DD876200FA58B3 /* paperPlane.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = paperPlane.scn; sourceTree = "<group>"; };
+		6B14BAFE20DD879100FA58B3 /* ARPlaneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlaneVC.swift; sourceTree = "<group>"; };
 		6B886CB620DD3D0C003F07F8 /* AviatoRoster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AviatoRoster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B886CB920DD3D0C003F07F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B886CBB20DD3D0C003F07F8 /* RosterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterVC.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			children = (
 				6B886CBB20DD3D0C003F07F8 /* RosterVC.swift */,
 				6B14BAFA20DD782200FA58B3 /* DutyDetailVC.swift */,
+				6B14BAFE20DD879100FA58B3 /* ARPlaneVC.swift */,
 				6B886CBD20DD3D0C003F07F8 /* Main.storyboard */,
 			);
 			path = ViewControllers;
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				6B14BAF820DD6DCF00FA58B3 /* Font Awesome 5 Free-Solid-900.otf */,
+				6B14BAFC20DD876200FA58B3 /* paperPlane.scn */,
 				6B886CB820DD3D0C003F07F8 /* AviatoRoster */,
 				6B886CB720DD3D0C003F07F8 /* Products */,
 				6E3EE27B79AB3BE4D561BC93 /* Pods */,
@@ -222,6 +228,7 @@
 				6B886CC420DD3D0E003F07F8 /* LaunchScreen.storyboard in Resources */,
 				6B886CC120DD3D0E003F07F8 /* Assets.xcassets in Resources */,
 				6B886CBF20DD3D0C003F07F8 /* Main.storyboard in Resources */,
+				6B14BAFD20DD876200FA58B3 /* paperPlane.scn in Resources */,
 				6B14BAF920DD6DD300FA58B3 /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +289,7 @@
 				6B886CBA20DD3D0C003F07F8 /* AppDelegate.swift in Sources */,
 				6B14BAEA20DD4CFF00FA58B3 /* WebClient.swift in Sources */,
 				6B14BAF020DD561D00FA58B3 /* DutyRW.swift in Sources */,
+				6B14BAFF20DD879100FA58B3 /* ARPlaneVC.swift in Sources */,
 				6B14BAE720DD4B9300FA58B3 /* DictConstants.swift in Sources */,
 				6B14BAEE20DD543200FA58B3 /* Utils.swift in Sources */,
 				6B14BAFB20DD782200FA58B3 /* DutyDetailVC.swift in Sources */,

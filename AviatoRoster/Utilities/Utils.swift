@@ -33,6 +33,11 @@ class Utils {
         viewController.duty = duty
         return viewController
     }
+    
+    class func arPlaneVC() -> ARPlaneVC {
+        let viewController = self.viewController(fromStoryboard: "Main", withViewControllerIdentifier: "ARPlaneVC") as! ARPlaneVC
+        return viewController
+    }
 }
 
 

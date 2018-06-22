@@ -53,6 +53,10 @@ class RosterVC: UIViewController {
             self.refreshControl.endRefreshing()
         }
     }
+    
+    @IBAction func paperPlanePressed(_ sender: UIButton) {
+        self.navigationController?.pushViewController(Utils.arPlaneVC(), animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
