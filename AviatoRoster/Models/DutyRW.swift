@@ -15,25 +15,34 @@ extension DutyRW {
     
     class func getRemoteDuties(callback: @escaping  (_ success: Bool) -> Void){
         WebClient.getRosterData { (duties, error) in
-            if let duties = duties, error == nil {
-                DutyRW().saveToDB(duties: duties)
-                callback(true)
-            } else {
-                callback(false)
+            DispatchQueue.main.sync {
+                if let duties = duties, error == nil {
+                    DutyRW().saveToDB(duties: duties)
+                    callback(true)
+                } else {
+                    callback(false)
+                }
             }
         }
     }
     
     func saveToDB(duties: [Duty]){
+        self.deleteAllDuties()
         let realm = try! Realm()
         try! realm.safeWrite {
-            realm.add(duties, update: true)
+            realm.add(duties, update: false)
         }
     }
     
     func getAllDuties() -> Results<Duty> {
         let realm = try! Realm()
         let results = realm.objects(Duty.self)
+        return results
+    }
+    
+    func getDateWiseDuties() -> Results<Duty> {
+        let predicate = NSPredicate(format: "dateString != nil AND dateString != ''")
+        let results = self.getAllDuties().filter(predicate).sorted(byKeyPath: "date", ascending: true)
         return results
     }
     

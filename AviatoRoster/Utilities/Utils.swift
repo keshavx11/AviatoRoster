@@ -12,16 +12,27 @@ import RealmSwift
 class Utils {
     
     class func convertToTimeStamp(_ dateString: String?) -> Int? {
-        if let dateString = dateString {
+        if let dateString = dateString, !dateString.isEmpty {
             let dfmatter = DateFormatter()
             dfmatter.dateFormat = "dd/MM/yyyy"
-            let date = dfmatter.date(from: dateString)
-            let dateStamp: TimeInterval = date!.timeIntervalSince1970
-            return Int(dateStamp)
+            if let date = dfmatter.date(from: dateString) {
+                let dateStamp: TimeInterval = date.timeIntervalSince1970
+                return Int(dateStamp)
+            }
         }
         return nil
     }
     
+    class func viewController(fromStoryboard name: String, withViewControllerIdentifier identifier: String) -> UIViewController {
+        let storyBoard = UIStoryboard(name: name, bundle: nil)
+        return storyBoard.instantiateViewController(withIdentifier: identifier) as UIViewController
+    }
+    
+    class func dutyDetailVC(forDuty duty: Duty) -> DutyDetailVC {
+        let viewController = self.viewController(fromStoryboard: "Main", withViewControllerIdentifier: "DutyDetailVC") as! DutyDetailVC
+        viewController.duty = duty
+        return viewController
+    }
 }
 
 
